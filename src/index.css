@@ -1,0 +1,195 @@
+@import '@xyflow/react/dist/style.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chatbot Flow Builder Design System */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 0 0% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    /* Flow canvas */
+    --canvas: 220 13% 95%;
+    --canvas-dots: 220 13% 91%;
+
+    /* Node colors */
+    --node-bg: 0 0% 100%;
+    --node-border: 220 13% 91%;
+    --node-shadow: 220 13% 85%;
+    
+    /* Message node specific */
+    --message-node: 168 76% 42%;
+    --message-node-bg: 166 55% 93%;
+    --message-node-border: 168 35% 85%;
+    --message-node-text: 168 76% 25%;
+
+    /* Panels */
+    --panel-bg: 0 0% 100%;
+    --panel-border: 220 13% 91%;
+    --panel-shadow: 220 8% 88%;
+
+    /* Interactive elements */
+    --primary: 168 76% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 168 76% 38%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --secondary-hover: 220 14% 92%;
+
+    /* Handles */
+    --handle: 220 13% 91%;
+    --handle-hover: 168 76% 42%;
+    --handle-connecting: 168 76% 50%;
+
+    /* States */
+    --selected: 168 76% 42%;
+    --error: 0 84.2% 60.2%;
+    --error-bg: 0 93% 97%;
+
+    /* Text */
+    --text-primary: 222.2 84% 4.9%;
+    --text-secondary: 215.4 16.3% 46.9%;
+    --text-muted: 215.4 16.3% 65%;
+
+    /* Borders and inputs */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --input-focus: 168 76% 42%;
+    --ring: 168 76% 42%;
+
+    --radius: 0.5rem;
+
+    /* Animations */
+    --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --canvas: 222.2 84% 4.9%;
+    --canvas-dots: 217.2 32.6% 17.5%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* React Flow Styles */
+  .react-flow__background {
+    background: hsl(var(--canvas)) !important;
+  }
+
+  .react-flow__background .react-flow__background-pattern {
+    fill: hsl(var(--canvas-dots)) !important;
+  }
+
+  .bg-canvas {
+    background: hsl(var(--canvas)) !important;
+  }
+
+  .bg-canvas-dots {
+    background: hsl(var(--canvas-dots)) !important;
+  }
+
+  .bg-node-bg {
+    background: hsl(var(--node-bg)) !important;
+  }
+
+  .border-node-border {
+    border-color: hsl(var(--node-border)) !important;
+  }
+
+  .bg-message-node-bg {
+    background: hsl(var(--message-node-bg)) !important;
+  }
+
+  .border-message-node-border {
+    border-color: hsl(var(--message-node-border)) !important;
+  }
+
+  .text-message-node {
+    color: hsl(var(--message-node)) !important;
+  }
+
+  .text-message-node-text {
+    color: hsl(var(--message-node-text)) !important;
+  }
+
+  .bg-panel-bg {
+    background: hsl(var(--panel-bg)) !important;
+  }
+
+  .border-panel-border {
+    border-color: hsl(var(--panel-border)) !important;
+  }
+
+  .bg-primary {
+    background: hsl(var(--primary)) !important;
+  }
+
+  .bg-primary-hover:hover {
+    background: hsl(var(--primary-hover)) !important;
+  }
+
+  .text-primary-foreground {
+    color: hsl(var(--primary-foreground)) !important;
+  }
+
+  .bg-secondary {
+    background: hsl(var(--secondary)) !important;
+  }
+
+  .bg-secondary-hover:hover {
+    background: hsl(var(--secondary-hover)) !important;
+  }
+
+  .bg-handle {
+    background: hsl(var(--handle)) !important;
+  }
+
+  .bg-handle-hover:hover {
+    background: hsl(var(--handle-hover)) !important;
+  }
+
+  .border-handle-connecting {
+    border-color: hsl(var(--handle-connecting)) !important;
+  }
+
+  .border-selected {
+    border-color: hsl(var(--selected)) !important;
+  }
+
+  .text-text-primary {
+    color: hsl(var(--text-primary)) !important;
+  }
+
+  .text-text-secondary {
+    color: hsl(var(--text-secondary)) !important;
+  }
+
+  .text-text-muted {
+    color: hsl(var(--text-muted)) !important;
+  }
+
+  .border-input {
+    border-color: hsl(var(--input)) !important;
+  }
+
+  .border-input-focus:focus {
+    border-color: hsl(var(--input-focus)) !important;
+  }
+
+  .focus:ring-ring:focus {
+    --tw-ring-color: hsl(var(--ring)) !important;
+  }
+}
